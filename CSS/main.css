@@ -8,4 +8,127 @@
 body {
   background-color: #061222;
 }
+
+header {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.position_Calculator {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  min-width: none;
+  min-height: none;
+}
+
+.position_Calculator .calculator {
+  display: -ms-grid;
+  display: grid;
+  grid-template: "total_Input  total_Input  total_Input    total_Input    total_Input"      80px "clear        delete       key_Multiply   key_Divide     key_Squareroot"   80px "number_7     number_8     number_9       key_Subtract   key_Potency2"     80px     "number_4     number_5     number_6       key_Add        key_Potency2"     80px "number_1     number_2     number_3       key_Common     key_Potency10"    80px "number_0     number_0     key_Equal      key_Equal      key_Potency10"    80px /    100px        100px        100px          100px          100px;
+}
+
+.position_Calculator .total_Input {
+  grid-area: total_Input;
+  width: 500px;
+  height: 80px;
+}
+
+.position_Calculator .clear {
+  grid-area: clear;
+}
+
+.position_Calculator .delete {
+  grid-area: delete;
+}
+
+.position_Calculator .key_Multiply {
+  grid-area: key_Multiply;
+}
+
+.position_Calculator .key_Divide {
+  grid-area: key_Divide;
+}
+
+.position_Calculator .key_Squareroot {
+  grid-area: key_Squareroot;
+}
+
+.position_Calculator .number_7 {
+  grid-area: number_7;
+}
+
+.position_Calculator .number_8 {
+  grid-area: number_8;
+}
+
+.position_Calculator .number_9 {
+  grid-area: number_9;
+}
+
+.position_Calculator .key_Subtract {
+  grid-area: key_Subtract;
+}
+
+.position_Calculator .key_Potency2 {
+  grid-area: key_Potency2;
+}
+
+.position_Calculator .number_4 {
+  grid-area: number_4;
+}
+
+.position_Calculator .number_5 {
+  grid-area: number_5;
+}
+
+.position_Calculator .number_6 {
+  grid-area: number_6;
+}
+
+.position_Calculator .key_Add {
+  grid-area: key_Add;
+}
+
+.position_Calculator .number_1 {
+  grid-area: number_1;
+}
+
+.position_Calculator .number_2 {
+  grid-area: number_2;
+}
+
+.position_Calculator .number_3 {
+  grid-area: number_3;
+}
+
+.position_Calculator .key_Common {
+  grid-area: key_Common;
+}
+
+.position_Calculator .key_Potency10 {
+  grid-area: key_Potency10;
+}
+
+.position_Calculator .number_0 {
+  grid-area: number_0;
+}
+
+.position_Calculator .key_Equal {
+  grid-area: key_Equal;
+}
+
+footer {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
 /*# sourceMappingURL=main.css.map */

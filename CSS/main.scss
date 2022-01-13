@@ -1,1 +1,110 @@
 @import 'base';
+
+// Variáveis globais SCSS
+$first-font-family:'Montserrat', sans-serif;
+$header-font-size: 10rem;
+$footer-font-size: 5rem;
+
+// Layout
+
+header{
+    font-family: $first-font-family;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.position_Calculator{
+    position: absolute;
+    top:8%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    min-width: none;
+    min-height: none;
+    .calculator{
+        display: grid;
+        grid-template: "total_Input  total_Input  total_Input    total_Input    total_Input"      80px
+                       "clear        delete       key_Multiply   key_Divide     key_Squareroot"   80px
+                       "number_7     number_8     number_9       key_Subtract   key_Potency2"     80px    
+                       "number_4     number_5     number_6       key_Add        key_Potency2"     80px
+                       "number_1     number_2     number_3       key_Common     key_Potency10"    80px
+                       "number_0     number_0     key_Equal      key_Equal      key_Potency10"    80px
+                    /    100px        100px        100px          100px          100px;
+    }
+    .total_Input{
+        grid-area: total_Input;
+        width: 500px;
+        height: 80px;
+    }
+    .clear{
+        grid-area: clear;
+    }
+    .delete{
+        grid-area: delete;
+    }
+    .key_Multiply{
+        grid-area: key_Multiply;
+    }
+    .key_Divide{
+        grid-area: key_Divide;
+    }
+    .key_Squareroot{
+        grid-area: key_Squareroot;
+    }
+    .number_7{
+        grid-area: number_7;
+    }
+    .number_8{
+        grid-area: number_8;
+    }
+    .number_9{
+        grid-area: number_9;
+    }
+    .key_Subtract{
+        grid-area: key_Subtract;
+    }
+    .key_Potency2{
+        grid-area: key_Potency2;
+    }
+    .number_4{
+    grid-area: number_4;
+    }
+    .number_5{
+        grid-area: number_5;
+    }
+    .number_6{
+        grid-area: number_6;
+    }
+    .key_Add{
+        grid-area: key_Add;
+    }
+    .number_1{
+        grid-area: number_1;
+    }
+    .number_2{
+        grid-area: number_2;
+    }
+    .number_3{
+        grid-area: number_3;
+    }
+    .key_Common{
+        grid-area: key_Common;
+    }
+    .key_Potency10{
+        grid-area: key_Potency10;
+    }
+    .number_0{
+        grid-area: number_0;
+    }
+    .key_Equal{
+        grid-area: key_Equal;
+    }
+    
+}
+
+footer{
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+}
+
