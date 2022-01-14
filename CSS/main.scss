@@ -4,37 +4,44 @@
 $first-font-family:'Montserrat', sans-serif;
 $header-font-size: 10rem;
 $footer-font-size: 5rem;
+$mobile-height: 56.25rem;
+$mobile-width: 40rem;
 
 // Layout
 
 header{
+    min-width: 100%;
+    max-height: 30%;
     font-family: $first-font-family;
     margin-top: 2rem;
     display: flex;
     justify-content: center;
 }
 
+.dropdown{
+    display: none;
+}
 .position_Calculator{
     position: absolute;
-    top:8%;
+    top:5%;
     left: 50%;
     transform: translate(-50%, 50%);
-    min-width: none;
-    min-height: none;
+    max-height: 50%;
+
     .calculator{
         display: grid;
-        grid-template: "total_Input  total_Input  total_Input    total_Input    total_Input"      80px
-                       "clear        delete       key_Multiply   key_Divide     key_Squareroot"   80px
-                       "number_7     number_8     number_9       key_Subtract   key_Potency2"     80px    
-                       "number_4     number_5     number_6       key_Add        key_Potency2"     80px
-                       "number_1     number_2     number_3       key_Common     key_Potency10"    80px
-                       "number_0     number_0     key_Equal      key_Equal      key_Potency10"    80px
-                    /    100px        100px        100px          100px          100px;
+        grid-template: "total_Input  total_Input  total_Input    total_Input    total_Input"      5rem
+                       "clear        delete       key_Multiply   key_Divide     key_Squareroot"   5rem
+                       "number_7     number_8     number_9       key_Subtract   key_Potency2"     5rem    
+                       "number_4     number_5     number_6       key_Add        key_Potency2"     5rem
+                       "number_1     number_2     number_3       key_Common     key_Potency10"    5rem
+                       "number_0     number_0     key_Equal      key_Equal      key_Potency10"    5rem
+                    /    6.25rem        6.25rem       6.25rem         6.25rem          6.25rem;
     }
     .total_Input{
         grid-area: total_Input;
-        width: 500px;
-        height: 80px;
+        width: 31.25rem;
+        height: 5rem;
     }
     .clear{
         grid-area: clear;
@@ -99,12 +106,15 @@ header{
     .key_Equal{
         grid-area: key_Equal;
     }
-    
+
+    // Media Querye
 }
 
+
 footer{
+    max-height: 10%;
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem;
     left: 2rem;
 }
 
