@@ -1,4 +1,5 @@
 @import 'base';
+@import 'dropdown';
 
 // Variáveis globais SCSS
 $first-font-family:'Montserrat', sans-serif;
@@ -18,9 +19,7 @@ header{
     justify-content: center;
 }
 
-.dropdown{
-    display: none;
-}
+
 .position_Calculator{
     position: absolute;
     top:5%;
@@ -74,7 +73,7 @@ header{
         grid-area: key_Potency2;
     }
     .number_4{
-    grid-area: number_4;
+        grid-area: number_4;
     }
     .number_5{
         grid-area: number_5;
@@ -108,6 +107,51 @@ header{
     }
 
     // Media Querye
+    @media (max-width: $mobile-width) and (orientation:portrait){
+        .dropdown{
+            display: none;
+        }
+        
+        .calculator{
+            position: absolute;
+            top:2%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+                .key_Potency10, .key_Potency2{
+                    display: none;
+                }
+                .key_Common{
+                    grid-column: 1;
+                    grid-row: 6;
+                }
+                .number_0{
+                    grid-column: 2;
+                }
+                .key_Equal{
+                    grid-column: 3;
+                }
+                .key_Add{
+                    grid-row: 6;
+                }
+                .key_Subtract{
+                    grid-row: 5;
+                }
+                .key_Divide{
+                    grid-row: 4;
+                }
+                .key_Multiply{
+                    grid-column: 4;
+                    grid-row: 3;
+
+                }
+                .key_Squareroot{
+                    grid-column: 4;
+                }
+        }
+        
+    }
 }
 
 

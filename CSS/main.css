@@ -11,6 +11,43 @@ body {
   max-height: 100%;
 }
 
+.dropdown {
+  list-style: none;
+}
+
+.dropdown .dropdown_Item {
+  font-size: 2rem;
+  min-width: 1rem;
+  width: 1rem;
+}
+
+.dropdown .dropdown_Item .dropdown_Submenu {
+  min-width: inherit;
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 120px;
+  height: 100px;
+  position: relative;
+}
+
+.dropdown .dropdown_Item .dropdown_Submenu .dropdown_Submenu_Item {
+  min-width: inherit;
+  list-style: none;
+  position: absolute;
+}
+
+.dropdown .dropdown_Item .dropdown_Submenu .dropdown_Submenu_Item .key_Potency_Mobile {
+  min-width: inherit;
+  font-size: 2rem;
+  position: absolute;
+}
+
 header {
   min-width: 100%;
   max-height: 30%;
@@ -22,10 +59,6 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.dropdown {
-  display: none;
 }
 
 .position_Calculator {
@@ -40,7 +73,13 @@ header {
 .position_Calculator .calculator {
   display: -ms-grid;
   display: grid;
-  grid-template: "total_Input  total_Input  total_Input    total_Input    total_Input"      5rem "clear        delete       key_Multiply   key_Divide     key_Squareroot"   5rem "number_7     number_8     number_9       key_Subtract   key_Potency2"     5rem     "number_4     number_5     number_6       key_Add        key_Potency2"     5rem "number_1     number_2     number_3       key_Common     key_Potency10"    5rem "number_0     number_0     key_Equal      key_Equal      key_Potency10"    5rem /    6.25rem        6.25rem       6.25rem         6.25rem          6.25rem;
+  grid-template: "total_Input  total_Input  total_Input    total_Input    total_Input"      5rem
+ "clear        delete       key_Multiply   key_Divide     key_Squareroot"   5rem
+ "number_7     number_8     number_9       key_Subtract   key_Potency2"     5rem    
+ "number_4     number_5     number_6       key_Add        key_Potency2"     5rem
+ "number_1     number_2     number_3       key_Common     key_Potency10"    5rem
+ "number_0     number_0     key_Equal      key_Equal      key_Potency10"    5rem
+ /    6.25rem        6.25rem       6.25rem         6.25rem          6.25rem;
 }
 
 .position_Calculator .total_Input {
@@ -131,6 +170,62 @@ header {
 
 .position_Calculator .key_Equal {
   grid-area: key_Equal;
+}
+
+@media (max-width: 40rem) and (orientation: portrait) {
+  .position_Calculator .dropdown {
+    display: none;
+  }
+  .position_Calculator .calculator {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)4;
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .position_Calculator .calculator .key_Potency10, .position_Calculator .calculator .key_Potency2 {
+    display: none;
+  }
+  .position_Calculator .calculator .key_Common {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 6;
+    grid-row: 6;
+  }
+  .position_Calculator .calculator .number_0 {
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  .position_Calculator .calculator .key_Equal {
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  .position_Calculator .calculator .key_Add {
+    -ms-grid-row: 6;
+    grid-row: 6;
+  }
+  .position_Calculator .calculator .key_Subtract {
+    -ms-grid-row: 5;
+    grid-row: 5;
+  }
+  .position_Calculator .calculator .key_Divide {
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+  .position_Calculator .calculator .key_Multiply {
+    -ms-grid-column: 4;
+    grid-column: 4;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .position_Calculator .calculator .key_Squareroot {
+    -ms-grid-column: 4;
+    grid-column: 4;
+  }
 }
 
 footer {
