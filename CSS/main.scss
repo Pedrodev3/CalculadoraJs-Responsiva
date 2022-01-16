@@ -7,28 +7,32 @@ $header-font-size: 10rem;
 $footer-font-size: 5rem;
 $mobile-height: 56.25rem;
 $mobile-width: 40rem;
+$btn__key--color: #1F3B4D;
+$btn__number--color: rgba(0, 0, 0, .9);
+$number-color: #fff;
+$box-shadow: #000;
 
 // Layout
 
 header{
-    min-width: 100%;
-    max-height: 30%;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    max-width: inherit;
     font-family: $first-font-family;
-    margin-top: 2rem;
     display: flex;
     justify-content: center;
 }
 
-
 .position_Calculator{
-    position: absolute;
-    top:5%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    max-height: 50%;
-
+    font-family: $first-font-family;
+    margin-top: 1rem;
+    max-width: inherit;
     .calculator{
+        .dropdown{
+            display: none;
+        }
         display: grid;
+        justify-content: center;
         grid-template: "total_Input  total_Input  total_Input    total_Input    total_Input"      5rem
                        "clear        delete       key_Multiply   key_Divide     key_Squareroot"   5rem
                        "number_7     number_8     number_9       key_Subtract   key_Potency2"     5rem    
@@ -108,19 +112,21 @@ header{
 
     // Media Querye
     @media (max-width: $mobile-width) and (orientation:portrait){
-        .dropdown{
-            display: none;
-        }
         
         .calculator{
-            position: absolute;
-            top:2%;
-            left: 50%;
-            transform: translate(-50%, 50%);
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 4rem);
+                .total_Input{
+                    width: 16rem;
+                    grid-column: 1 / 6;
+                }
+                .dropdown{
+                    grid-column: 3;
+                    display: grid;
+                }
                 .key_Potency10, .key_Potency2{
                     display: none;
+                    border-bottom-right-radius: none;
                 }
                 .key_Common{
                     grid-column: 1;
@@ -134,6 +140,7 @@ header{
                 }
                 .key_Add{
                     grid-row: 6;
+                    
                 }
                 .key_Subtract{
                     grid-row: 5;
@@ -149,16 +156,65 @@ header{
                 .key_Squareroot{
                     grid-column: 4;
                 }
-        }
-        
+        }   
+    }  
+}
+
+// Design Calculadora
+
+.position_Calculator{
+    .calculator{
+        color: #fff;
+            .total_Input{
+                cursor: default;
+                background-color: $btn__number--color;
+                border-top-left-radius: 1rem;
+                border-top-right-radius: 1rem;
+                box-shadow: 0 0 1.5em $box-shadow;
+            }
+            .btn_Second{
+                cursor: pointer;
+                color: #fff;
+                font-size: 1.3rem;
+                border: solid 1px black;
+                border-radius: .1rem;
+                box-shadow: 0 0 1.5em $box-shadow;
+                &:hover{
+                    background-color: rgba(0, 0, 0, .7);
+                }
+            }
+            .btn__clear{
+                background-color: red;
+                font-size: 2rem;
+            }
+            .btn__number{
+                background-color: $btn__number--color;
+            }
+            .btn__key{
+                background-color: $btn__key--color;
+            }
+            .number_0{
+                border-bottom-left-radius: 1rem;
+            }
+            .key_Potency10{
+                border-bottom-right-radius: 1rem;
+            }
+    }
+}
+
+footer{
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+    max-width: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    .footer__a{
+        color: black;
+        text-decoration: none;
     }
 }
 
 
-footer{
-    max-height: 10%;
-    position: absolute;
-    bottom: 1rem;
-    left: 2rem;
-}
 
