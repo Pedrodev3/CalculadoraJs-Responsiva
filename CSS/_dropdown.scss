@@ -1,29 +1,56 @@
+$first-font-family:'Montserrat', sans-serif;
+$header-font-size: 10rem;
+$footer-font-size: 5rem;
+$mobile-height: 56.25rem;
+$mobile-width: 40rem;
+$btn__key--color: #1F3B4D;
+$btn__number--color: rgba(0, 0, 0, .9);
+$number-color: #fff;
+$box-shadow: #000;
+
+
 .dropdown{
     list-style: none;
-    .dropdown_Item{ 
-        font-size: 2rem;
-        min-width: 1rem;
-        width: 1rem;
-      .dropdown_Submenu{
-          min-width: inherit;
-          margin-top: 1rem;
-          display: flex;
-          justify-content: flex-start;
-          background-color: rgba($color: #000000, $alpha: .2);
-          width: 120px;
-          height: 100px;
-          position: relative;
-        .dropdown_Submenu_Item{
-            min-width: inherit;
-            list-style: none;
-            position: absolute;
-            .key_Potency_Mobile{
-                min-width: inherit;
-                font-size: 2rem;
-                position: absolute; 
-            }
-        }
-    }
-    }
-    
 }
+.btn__dropdown{
+    background-color: $btn__key--color;
+    width: 65px;
+    height: 80px;
+    transition: .2s;
+}
+
+.btn__dropdown_p{
+    font-size: 20px;
+}
+#dropdown_Submenu{
+    display: none;
+    list-style: none;
+    border-radius: 5px;
+    padding: 0px 5px 5px 5px;
+    cursor: default;
+    border: 2px solid #3d3d3d;
+}
+.dropdown_Submenu_Item{
+    display: inline-block;
+}
+.dropdown:hover #dropdown_Submenu{
+    display: inline-block; 
+}
+.key_Potency_mobile{
+    color: $number-color;
+    background-color: rgba(0, 0, 0, 1);
+    height: 35px;
+    width: 50px;
+    border: solid 1px black;
+    border-radius: 5px;
+    transition: .2s;
+    &:hover{
+        background-color: rgba(0, 0, 0, 1); 
+    }
+}
+.p_1{
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+
