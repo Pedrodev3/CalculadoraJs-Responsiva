@@ -29,6 +29,10 @@ body {
   transition: .2s;
 }
 
+.btn__dropdown:hover .number_9 {
+  display: none;
+}
+
 .btn__dropdown_p {
   font-size: 20px;
 }
@@ -52,7 +56,7 @@ body {
 
 .key_Potency_mobile {
   color: #fff;
-  background-color: black;
+  background-color: #1F3B4D;
   height: 35px;
   width: 50px;
   border: solid 1px black;
@@ -62,7 +66,7 @@ body {
 }
 
 .key_Potency_mobile:hover {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .p_1 {
@@ -250,6 +254,10 @@ header {
   .position_Calculator .calculator .key_Squareroot {
     -ms-grid-column: 4;
     grid-column: 4;
+  }
+  .position_Calculator .calculator .number_9 {
+    -ms-grid-column: 3;
+    grid-column: 3;
   }
 }
 

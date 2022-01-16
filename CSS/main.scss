@@ -112,7 +112,6 @@ header{
 
     // Media Querye
     @media (max-width: $mobile-width) and (orientation:portrait){
-        
         .calculator{
             display: grid;
             grid-template-columns: repeat(4, 4rem);
@@ -155,6 +154,9 @@ header{
                 }
                 .key_Squareroot{
                     grid-column: 4;
+                }
+                .number_9{
+                    grid-column: 3;
                 }
         }   
     }  
