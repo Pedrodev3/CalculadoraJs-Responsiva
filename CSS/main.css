@@ -214,6 +214,7 @@ header {
     grid-column: 3;
     display: -ms-grid;
     display: grid;
+    z-index: 1;
   }
   .position_Calculator .calculator .key_Potency10, .position_Calculator .calculator .key_Potency2 {
     display: none;
@@ -258,6 +259,7 @@ header {
   .position_Calculator .calculator .number_9 {
     -ms-grid-column: 3;
     grid-column: 3;
+    z-index: 0;
   }
 }
 
@@ -272,6 +274,10 @@ header {
   border-top-right-radius: 1rem;
   -webkit-box-shadow: 0 0 1.5em #000;
           box-shadow: 0 0 1.5em #000;
+  text-align: right;
+  color: #fff;
+  font-size: 2.5rem;
+  padding-right: .5rem;
 }
 
 .position_Calculator .calculator .btn_Second {
@@ -279,7 +285,7 @@ header {
   color: #fff;
   font-size: 1.3rem;
   border: solid 1px black;
-  border-radius: .1rem;
+  border-radius: .3rem;
   -webkit-box-shadow: 0 0 1.5em #000;
           box-shadow: 0 0 1.5em #000;
 }
@@ -299,14 +305,6 @@ header {
 
 .position_Calculator .calculator .btn__key {
   background-color: #1F3B4D;
-}
-
-.position_Calculator .calculator .number_0 {
-  border-bottom-left-radius: 1rem;
-}
-
-.position_Calculator .calculator .key_Potency10 {
-  border-bottom-right-radius: 1rem;
 }
 
 footer {
