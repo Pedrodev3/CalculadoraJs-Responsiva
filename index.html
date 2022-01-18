@@ -21,52 +21,122 @@
 
     <main class="position_Calculator">
       <section id="calculator" class="calculator">
-        <input type="text" id="total" class="total_Input">
+        <p id="total" class="total_Input"></p>
 
         <ul class="dropdown">
           <li class="dropdown_Item">
-            <button class="btn__dropdown btn_Second"><p class="btn__dropdown_p">Y<sup>x</sup></p></button>
-            <br>
+            <button class="btn__dropdown btn_Second">
+              <p class="btn__dropdown_p">Y<sup>x</sup></p>
+            </button>
+            <br />
             <ul id="dropdown_Submenu">
               <li class="dropdown_Submenu_Item">
-                <button class="key_Potency_mobile"><p class="p_1">X<sup>2</sup></p></button>
+                <button class="key_Potency_mobile" onclick="elevated2()">
+                  <p class="dropdown__submenu__item__p">X<sup>2</sup></p>
+                </button>
               </li>
               <li class="dropdown_Submenu_Item">
-               <button class="key_Potency_mobile"><p class="p_1">X<sup>10</sup></p></button>
+                <button class="key_Potency_mobile" onclick="elevated10()">
+                  <p class="dropdown__submenu__item__p">X<sup>10</sup></p>
+                </button>
               </li>
             </ul>
           </li>
         </ul>
 
-        <button class="clear btn_Second btn__clear">C</button>
-        <button class="delete btn_Second btn__key">
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgb(255, 0, 0)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-delete"><path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path><line x1="18" y1="9" x2="12" y2="15"></line><line x1="12" y1="9" x2="18" y2="15"></line></svg>
-        </button> <!-- Delete -->
-        <button class="key_Multiply btn_Second btn__key">X</button>
-        <button class="key_Divide btn_Second btn__key">&#247;</button> <!-- Divisão -->
-        <button class="key_Squareroot btn_Second btn__key">&#8730;</button> <!-- Raiz Quadrada -->
-        <button class="number_7 btn_Second btn__number">7</button>
-        <button class="number_8 btn_Second btn__number">8</button>
-        <button class="number_9 btn_Second btn__number">9</button>
-        <button class="key_Subtract btn_Second btn__key">-</button>
-        <button class="key_Potency2 btn_Second btn__key">X<sup>2</sup></button>
-        <button class="number_4 btn_Second btn__number">4</button>
-        <button class="number_5 btn_Second btn__number">5</button>
-        <button class="number_6 btn_Second btn__number">6</button>
-        <button class="key_Add btn_Second btn__key">+</button>
-        <button class="number_1 btn_Second btn__number">1</button>
-        <button class="number_2 btn_Second btn__number">2</button>
-        <button class="number_3 btn_Second btn__number">3</button>
-        <button class="key_Potency10 btn_Second btn__key">X<sup>10</sup></button>
-        <button class="key_Common btn_Second btn__key">,</button>
-        <button class="number_0 btn_Second btn__number opa">0</button>
-        <button class="key_Equal btn_Second btn__key">=</button>
-
+        <button class="clear btn_Second btn__clear" onclick="clean()">C</button>
+        <button class="delete btn_Second btn__key" onclick="del()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="rgb(255, 0, 0)"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-delete"
+          >
+            <path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path>
+            <line x1="18" y1="9" x2="12" y2="15"></line>
+            <line x1="12" y1="9" x2="18" y2="15"></line>
+          </svg>
+        </button>
+        <!-- Delete -->
+        <button class="key_Multiply btn_Second btn__key" onclick="insert('*')">
+          x
+        </button>
+        <button class="key_Divide btn_Second btn__key" onclick="insert('/')">
+          &#247;
+        </button>
+        <!-- Divisão -->
+        <button class="key_Squareroot btn_Second btn__key" onclick="sqrt()">
+          &#8730;
+        </button>
+        <!-- Raiz Quadrada -->
+        <button class="number_7 btn_Second btn__number" onclick="insert('7')">
+          7
+        </button>
+        <button class="number_8 btn_Second btn__number" onclick="insert('8')">
+          8
+        </button>
+        <button class="number_9 btn_Second btn__number" onclick="insert('9')">
+          9
+        </button>
+        <button class="key_Subtract btn_Second btn__key" onclick="insert('-')">
+          -
+        </button>
+        <button class="key_Potency2 btn_Second btn__key" onclick="elevated2()">
+          X<sup>2</sup>
+        </button>
+        <button class="number_4 btn_Second btn__number" onclick="insert('4')">
+          4
+        </button>
+        <button class="number_5 btn_Second btn__number" onclick="insert('5')">
+          5
+        </button>
+        <button class="number_6 btn_Second btn__number" onclick="insert('6')">
+          6
+        </button>
+        <button class="key_Add btn_Second btn__key" onclick="insert('+')">
+          +
+        </button>
+        <button class="number_1 btn_Second btn__number" onclick="insert('1')">
+          1
+        </button>
+        <button class="number_2 btn_Second btn__number" onclick="insert('2')">
+          2
+        </button>
+        <button class="number_3 btn_Second btn__number" onclick="insert('3')">
+          3
+        </button>
+        <button
+          class="key_Potency10 btn_Second btn__key"
+          onclick="elevated10()"
+        >
+          X<sup>10</sup>
+        </button>
+        <button class="key_Common btn_Second btn__key" onclick="insert('.')">
+          .
+        </button>
+        <button class="number_0 btn_Second btn__number" onclick="insert('0')">
+          0
+        </button>
+        <button class="key_Equal btn_Second btn__key" onclick="calcular()">
+          =
+        </button>
+        
       </section>
     </main>
 
     <footer>
-      <p>Criado por <a href="mailto:pedrosaraivadev@gmail.com" class="footer__a">Pedro Saraiva</a></p>
+      <p>
+        Criado por
+        <a href="mailto:pedrosaraivadev@gmail.com" class="footer__a"
+          >Pedro Saraiva</a
+        >
+      </p>
     </footer>
   </body>
 </html>
