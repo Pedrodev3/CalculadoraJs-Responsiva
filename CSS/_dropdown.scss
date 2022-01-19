@@ -1,61 +1,57 @@
-$first-font-family:'Montserrat', sans-serif;
+$first-font-family: "Montserrat", sans-serif;
 $header-font-size: 10rem;
 $footer-font-size: 5rem;
 $mobile-height: 56.25rem;
 $mobile-width: 40rem;
-$btn__key--color: #1F3B4D;
-$btn__number--color: rgba(0, 0, 0, .9);
+$btn__key--color: #1f3b4d;
+$btn__number--color: rgba(0, 0, 0, 0.9);
 $number-color: #fff;
 $box-shadow: #000;
 
-
-.dropdown{
-    list-style: none;
+.dropdown {
+  list-style: none;
 }
-.btn__dropdown{
-    background-color: $btn__key--color;
-    width: 65px;
-    height: 80px;
-    transition: .2s;
-    &:hover{
-        .number_9{
-            display: none;
-        }
+.btn__dropdown {
+  background-color: $btn__key--color;
+  width: 65px;
+  height: 80px;
+  transition: 0.2s;
+  &:hover {
+    .number_9 {
+      display: none;
     }
+  }
 }
-
-.btn__dropdown_p{
-    font-size: 20px;
+.btn__dropdown_p {
+  font-size: 20px;
 }
-#dropdown_Submenu{
-    display: none;
-    list-style: none;
-    border-radius: 5px;
-    padding: 0px 5px 5px 5px;
-    cursor: default;
-    border: 2px solid #3d3d3d;
+#dropdown_Submenu {
+  display: none;
+  list-style: none;
+  border-radius: 5px;
+  padding: 0px 5px 5px 5px;
+  cursor: default;
+  border: 2px solid #3d3d3d;
 }
-.dropdown_Submenu_Item{
-    display: inline-block;
+.dropdown_Submenu_Item {
+  display: inline-block;
 }
-.dropdown:hover #dropdown_Submenu{
-    display: inline-block; 
+.dropdown:hover #dropdown_Submenu {
+  display: inline-block;
 }
-.key_Potency_mobile{
-    color: $number-color;
-    background-color: $btn__key--color;
-    height: 35px;
-    width: 50px;
-    border: solid 1px black;
-    border-radius: 5px;
-    transition: .2s;
-    &:hover{
-        background-color: rgba(0, 0, 0, .7); 
-    }
+.key_Potency_mobile {
+  color: $number-color;
+  background-color: $btn__key--color;
+  height: 35px;
+  width: 50px;
+  border: solid 1px black;
+  border-radius: 5px;
+  transition: 0.2s;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
 }
-.p_1{
-    font-size: 1.2rem;
-    color: #fff;
+.dropdown__submenu__item__p {
+  font-size: 1.2rem;
+  color: #fff;
 }
-
-

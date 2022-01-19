@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@1,200&family=Roboto:ital,wght@0,100;1,300&display=swap");
+#fcfcfc
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +8,7 @@
 }
 
 body {
-  background-color: #5684AE;
+  background-color: #fcfcfc;
   max-width: 100vw;
   max-height: 100vh;
   display: -ms-grid;
@@ -22,11 +24,11 @@ body {
 }
 
 .btn__dropdown {
-  background-color: #1F3B4D;
+  background-color: #1f3b4d;
   width: 65px;
   height: 80px;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .btn__dropdown:hover .number_9 {
@@ -56,20 +58,20 @@ body {
 
 .key_Potency_mobile {
   color: #fff;
-  background-color: #1F3B4D;
+  background-color: #1f3b4d;
   height: 35px;
   width: 50px;
   border: solid 1px black;
   border-radius: 5px;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .key_Potency_mobile:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.p_1 {
+.dropdown__submenu__item__p {
   font-size: 1.2rem;
   color: #fff;
 }
@@ -78,7 +80,7 @@ header {
   font-size: 1.5rem;
   margin-top: 1rem;
   max-width: inherit;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Bebas Neue", cursive;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,7 +90,7 @@ header {
 }
 
 .position_Calculator {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Bebas Neue", cursive;
   margin-top: 1rem;
   max-width: inherit;
 }
@@ -99,7 +101,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  grid-template: "total_Input  total_Input  total_Input    total_Input    total_Input"      5rem "clear        delete       key_Multiply   key_Divide     key_Squareroot"   5rem "number_7     number_8     number_9       key_Subtract   key_Potency2"     5rem     "number_4     number_5     number_6       key_Add        key_Potency2"     5rem "number_1     number_2     number_3       key_Common     key_Potency10"    5rem "number_0     number_0     key_Equal      key_Equal      key_Potency10"    5rem /    6.25rem        6.25rem       6.25rem         6.25rem          6.25rem;
+  grid-template: "total_Input  total_Input  total_Input    total_Input    total_Input" 5rem "clear        delete       key_Multiply   key_Divide     key_Squareroot" 5rem "number_7     number_8     number_9       key_Subtract   key_Potency2" 5rem "number_4     number_5     number_6       key_Add        key_Potency2" 5rem "number_1     number_2     number_3       key_Common     key_Potency10" 5rem "number_0     number_0     key_Equal      key_Equal      key_Potency10" 5rem / 6.25rem 6.25rem 6.25rem 6.25rem 6.25rem;
 }
 
 .position_Calculator .calculator .dropdown {
@@ -216,7 +218,8 @@ header {
     display: grid;
     z-index: 1;
   }
-  .position_Calculator .calculator .key_Potency10, .position_Calculator .calculator .key_Potency2 {
+  .position_Calculator .calculator .key_Potency10,
+  .position_Calculator .calculator .key_Potency2 {
     display: none;
     border-bottom-right-radius: none;
   }
@@ -268,6 +271,15 @@ header {
 }
 
 .position_Calculator .calculator .total_Input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: default;
   background-color: rgba(0, 0, 0, 0.9);
   border-top-left-radius: 1rem;
@@ -276,16 +288,17 @@ header {
           box-shadow: 0 0 1.5em #000;
   text-align: right;
   color: #fff;
-  font-size: 2.5rem;
-  padding-right: .5rem;
+  font-size: 2.8rem;
+  padding-right: 0.5rem;
+  overflow-x: auto;
 }
 
 .position_Calculator .calculator .btn_Second {
   cursor: pointer;
-  color: #fff;
+  color: #fcfcfc;
   font-size: 1.3rem;
   border: solid 1px black;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   -webkit-box-shadow: 0 0 1.5em #000;
           box-shadow: 0 0 1.5em #000;
 }
@@ -294,9 +307,18 @@ header {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.position_Calculator .calculator .btn_Second:active {
+  -webkit-transform: scale(0.92);
+          transform: scale(0.92);
+}
+
 .position_Calculator .calculator .btn__clear {
   background-color: red;
   font-size: 2rem;
+}
+
+.position_Calculator .calculator .btn__clear:hover {
+  background-color: #3f0606;
 }
 
 .position_Calculator .calculator .btn__number {
@@ -304,7 +326,7 @@ header {
 }
 
 .position_Calculator .calculator .btn__key {
-  background-color: #1F3B4D;
+  background-color: #1f3b4d;
 }
 
 footer {

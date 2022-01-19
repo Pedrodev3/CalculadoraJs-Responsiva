@@ -1,12 +1,18 @@
-$body-color: #5684AE;
+$body-color: #fcfcfc;
 
-*{margin: 0;padding: 0;box-sizing: border-box;}
+#fcfcfc
 
-body{
-    background-color: $body-color;
-    max-width: 100vw;
-    max-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 4fr)
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body-color;
+  max-width: 100vw;
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 4fr);
 }
