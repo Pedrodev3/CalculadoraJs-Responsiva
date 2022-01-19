@@ -7,7 +7,7 @@ A linguagem de programação utilizada estruturar e manipular o comportamento da
 
 Lembrando que a Calculadora possui responsividade total para maior parte dos dispositivos e para mobile uma das configurações feita foi diminuir o layout a partir da criação de um botão que gera um dropdown para dois botões menores que realizam as operações de potência.
 
-A fonte de texto utilizada foi: Roboto.<br>
+A fonte de texto utilizada foi: Roboto.<br><br>
 E utilizei essas cores no projeto:<br>
     Plano de fundo da página: #e5e5e5.<br>
     Plano de fundo do visor e dos botões numéricos: rgba(0, 0, 0, 0.9).<br>
