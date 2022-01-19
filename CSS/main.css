@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@1,200&family=Roboto:ital,wght@0,100;1,300&display=swap");
-#fcfcfc
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +6,7 @@
 }
 
 body {
-  background-color: #fcfcfc;
+  background-color: #e5e5e5;
   max-width: 100vw;
   max-height: 100vh;
   display: -ms-grid;
@@ -80,7 +78,7 @@ header {
   font-size: 1.5rem;
   margin-top: 1rem;
   max-width: inherit;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Roboto", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,7 +88,7 @@ header {
 }
 
 .position_Calculator {
-  font-family: "Bebas Neue", cursive;
+  font-family: "Roboto", sans-serif;
   margin-top: 1rem;
   max-width: inherit;
 }
