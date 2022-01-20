@@ -58,7 +58,7 @@ body {
   transition: 0.2s;
 }
 .key_Potency_mobile:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #5c89a5;
 }
 
 .dropdown__submenu__item__p {
@@ -233,9 +233,6 @@ header {
   border-radius: 0.3rem;
   box-shadow: 0 0 1.5em #000;
 }
-.position_Calculator .calculator .btn_Second:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
 .position_Calculator .calculator .btn_Second:active {
   transform: scale(0.92);
 }
@@ -244,13 +241,19 @@ header {
   font-size: 2rem;
 }
 .position_Calculator .calculator .btn__clear:hover {
-  background-color: #3f0606;
+  background-color: #d84242;
 }
 .position_Calculator .calculator .btn__number {
   background-color: rgba(0, 0, 0, 0.9);
 }
+.position_Calculator .calculator .btn__number:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 .position_Calculator .calculator .btn__key {
   background-color: #1f3b4d;
+}
+.position_Calculator .calculator .btn__key:hover {
+  background-color: #5c89a5;
 }
 
 footer {
@@ -265,6 +268,9 @@ footer {
 footer .footer__a {
   color: black;
   text-decoration: none;
+}
+footer .footer__a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=main.css.map */
