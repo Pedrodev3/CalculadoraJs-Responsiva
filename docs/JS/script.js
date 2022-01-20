@@ -2,7 +2,8 @@
 
 function insert(num) {
   const number = document.getElementById("total").innerHTML;
-  document.getElementById("total").textContent = number + num;
+  let x = document.getElementById("total").textContent = number + num;
+  x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 // Botão para apagar tudo
@@ -52,3 +53,9 @@ function calcular() {
     document.getElementById("total").textContent = eval(total.textContent);
   }
 }
+
+
+
+
+
+
