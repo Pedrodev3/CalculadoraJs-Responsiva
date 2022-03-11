@@ -2,9 +2,17 @@
 
 function insert(num) {
   const number = document.getElementById("total").innerHTML;
-  let x = document.getElementById("total").textContent = number + num;
-  x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  document.getElementById("total").textContent = number + num;
+  
 }
+
+// Acrescentando vírgula a cada 3 caracteres
+
+function addEventos() {
+  document.getElementById('total').toLocaleString("en-US").addEventListener('click', insert);
+}
+
+window.addEventListener('load', addEventos);
 
 // Botão para apagar tudo
 
@@ -53,6 +61,8 @@ function calcular() {
     document.getElementById("total").textContent = eval(total.textContent);
   }
 }
+
+
 
 
 
