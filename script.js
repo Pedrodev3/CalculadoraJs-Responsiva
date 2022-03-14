@@ -2,17 +2,10 @@
 
 function insert(num) {
   const number = document.getElementById("total").innerHTML;
-  document.getElementById("total").textContent = number + num;
+  let firstResult = number + num;
+  document.getElementById("total").textContent = firstResult;
   
 }
-
-// Acrescentando vírgula a cada 3 caracteres
-
-function addEventos() {
-  document.getElementById('total').toLocaleString("en-US").addEventListener('click', insert);
-}
-
-window.addEventListener('load', addEventos);
 
 // Botão para apagar tudo
 
